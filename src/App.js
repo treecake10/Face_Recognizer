@@ -55,7 +55,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://afternoon-spire-62470.herokuapp.com')
+    fetch('https://fast-depths-26607.herokuapp.com')
       .then(response => response.json())
       .then(data => console.log(data));
   }
@@ -86,7 +86,7 @@ class App extends Component {
 
   onButtonSubmit = (event) => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://afternoon-spire-62470.herokuapp.com/imageurl', { 
+      fetch('https://fast-depths-26607.herokuapp.com/imageurl', { 
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -99,7 +99,7 @@ class App extends Component {
 
         if(response) {
 
-          fetch('https://afternoon-spire-62470.herokuapp.com/image', { 
+          fetch('https://fast-depths-26607.herokuapp.com/image', { 
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
